@@ -1,0 +1,45 @@
+import type { Metadata } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
+import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "Lumière — Curated Modern Living",
+  description:
+    "Discover thoughtfully designed products for modern living. Premium quality, timeless style.",
+  keywords: ["e-commerce", "modern living", "premium products", "design"],
+  openGraph: {
+    title: "Lumière — Curated Modern Living",
+    description: "Discover thoughtfully designed products for modern living.",
+    type: "website",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+      <body className="bg-stone-50 text-slate-900 antialiased font-sans">
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
+}
