@@ -727,7 +727,7 @@ export default function HomePage() {
                   ))}
                 </div>
                 <p className="text-slate-700 leading-relaxed text-sm mb-5 text-pretty">
-                  "{t.text}"
+                  &ldquo;{t.text}&rdquo;
                 </p>
                 <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
                   <div className="w-10 h-10 rounded-full overflow-hidden shrink-0 ring-2 ring-indigo-100">
